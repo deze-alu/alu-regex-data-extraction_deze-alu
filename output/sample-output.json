@@ -1,0 +1,286 @@
+{
+   "n.mugisha@alueducation.com": {
+      "type": "This is an ALU offical email",
+      "valid": true
+   },
+   "aline.uwase@alueducation.com": {
+      "type": "This is an ALU offical email",
+      "valid": true
+   },
+   "j.kamanzi@alueducation.com": {
+      "type": "This is an ALU offical email",
+      "valid": true
+   },
+   "brian.k@alumni.alueducation.com": {
+      "type": "This is an ALU alumni email",
+      "valid": true
+   },
+   "alumni.office@alumni.alueducation.com": {
+      "type": "This is an ALU alumni email",
+      "valid": true
+   },
+   "chidi.okafor@si.alueducation.com": {
+      "type": "This is an ALU SI email",
+      "valid": true
+   },
+   "si.desk@si.alueducation.com": {
+      "type": "This is an ALU SI email",
+      "valid": true
+   },
+   "dana.w@gmail.com": {
+      "type": "This is a regular email address",
+      "valid": true
+   },
+   "ops.team@acme-corp.co.ke": {
+      "type": "This is a regular email address",
+      "valid": true
+   },
+   "finance-desk@acme-corp.co.ke": {
+      "type": "This is a regular email address",
+      "valid": true
+   },
+   "hello@partner-sync.io": {
+      "type": "This is a regular email address",
+      "valid": true
+   },
+   "support+billing@partner-sync.io": {
+      "type": "This is a regular email address",
+      "valid": true
+   },
+   "eve..morgan@alueducation.com": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   ".leading.dot@alueducation.com": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "trailing.dot.@alumni.alueducation.com": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "frank@fake-alueducation.com": {
+      "type": "This is a regular email address",
+      "valid": true
+   },
+   "admin@alueducation.com.attacker.net": {
+      "type": "This is a regular email address",
+      "valid": true
+   },
+   "student@alueducation": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "plainaddress": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "user@@alueducation.com": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "https://api.partner-sync.io/v2/customers?page=3&limit=100": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "https://docs.partner-sync.io/runbooks/reconciliation#step-4": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "https://hooks.acme-corp.co.ke/inbound/9931": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "https://partner-sync.io/pricing?utm_source=email&utm_campaign=q3": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "https://cdn.partner-sync.io/img/hero.png": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "https://alumni.alueducation.com/login": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "https://www.alueducation.com/programmes/bsc-computer-science": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "https://git.acme-corp.co.ke/payments/releases/v2.4.1": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "http://legacy.partner-sync.io:8080/v1/orders": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "http://vendor-legacy.example.org/catalog/item?id=77": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "https://partner-sync.io/contact": {
+      "type": "This is a valid url",
+      "valid": true
+   },
+   "ftp://files.partner-sync.io/archive.zip": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "htp://broken-scheme.example.com": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "www.no-scheme-here.com": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "+250 788 123 456": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "+250788990112": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "250-788-990-112": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "+1 (202) 555-0147": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "(415) 555-0132": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "415.555.0199": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "415-555-0132": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "212 555 0188": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "+44 20 7946 0958": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "+254 712 345 678": {
+      "type": "This is a phone number",
+      "valid": true
+   },
+   "555-01": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "+12345": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "4111 1111 1111 1111": {
+      "type": "This is Visa Credit card",
+      "valid": true
+   },
+   "4532-0151-1283-0366": {
+      "type": "This is Visa Credit card",
+      "valid": true
+   },
+   "4012888888881881": {
+      "type": "This is Visa Credit card",
+      "valid": true
+   },
+   "4916 3385 0608 0929": {
+      "type": "This is Visa Credit card",
+      "valid": true
+   },
+   "5555 5555 5555 4444": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "6011 0009 9013 9424": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "1234 5678 9012 3456": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "4111 1111 1111 111": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "3782 822463 10005": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "4111-1111 1111-1111": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "<div class=\"hero\" data-campaign=\"q3-launch\">": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "<h1>": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "</h1>": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "<p>": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "</p>": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "<strong>": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "</strong>": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "<a href=\"https://partner-sync.io/pricing\">": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "</a>": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "<img src=\"https://cdn.partner-sync.io/img/hero.png\" alt=\"dashboard\" />": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "<br />": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "<span class=\"tags\">": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "</div>": {
+      "type": "This is a valid HTML tag",
+      "valid": true
+   },
+   "< not a tag >": {
+      "type": "Invalid String",
+      "valid": false
+   },
+   "<123invalid>": {
+      "type": "Invalid String",
+      "valid": false
+   }
+}
