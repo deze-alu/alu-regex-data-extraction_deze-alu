@@ -1,286 +1,357 @@
-{
-   "n.mugisha@alueducation.com": {
-      "type": "This is an ALU offical email",
+[
+   {
+      "value": "n*******a@alueducation.com",
+      "type": "This is an ALU official email",
       "valid": true
    },
-   "aline.uwase@alueducation.com": {
-      "type": "This is an ALU offical email",
+   {
+      "value": "a*********e@alueducation.com",
+      "type": "This is an ALU official email",
       "valid": true
    },
-   "j.kamanzi@alueducation.com": {
-      "type": "This is an ALU offical email",
+   {
+      "value": "j*******i@alueducation.com",
+      "type": "This is an ALU official email",
       "valid": true
    },
-   "brian.k@alumni.alueducation.com": {
+   {
+      "value": "b*****k@alumni.alueducation.com",
       "type": "This is an ALU alumni email",
       "valid": true
    },
-   "alumni.office@alumni.alueducation.com": {
+   {
+      "value": "a***********e@alumni.alueducation.com",
       "type": "This is an ALU alumni email",
       "valid": true
    },
-   "chidi.okafor@si.alueducation.com": {
+   {
+      "value": "c**********r@si.alueducation.com",
       "type": "This is an ALU SI email",
       "valid": true
    },
-   "si.desk@si.alueducation.com": {
+   {
+      "value": "s*****k@si.alueducation.com",
       "type": "This is an ALU SI email",
       "valid": true
    },
-   "dana.w@gmail.com": {
+   {
+      "value": "d****w@gmail.com",
       "type": "This is a regular email address",
       "valid": true
    },
-   "ops.team@acme-corp.co.ke": {
+   {
+      "value": "o******m@acme-corp.co.ke",
       "type": "This is a regular email address",
       "valid": true
    },
-   "finance-desk@acme-corp.co.ke": {
+   {
+      "value": "f**********k@acme-corp.co.ke",
       "type": "This is a regular email address",
       "valid": true
    },
-   "hello@partner-sync.io": {
+   {
+      "value": "h***o@partner-sync.io",
       "type": "This is a regular email address",
       "valid": true
    },
-   "support+billing@partner-sync.io": {
+   {
+      "value": "s*************g@partner-sync.io",
       "type": "This is a regular email address",
       "valid": true
    },
-   "eve..morgan@alueducation.com": {
+   {
+      "value": "eve..morgan@alueducation.com",
       "type": "Invalid String",
       "valid": false
    },
-   ".leading.dot@alueducation.com": {
+   {
+      "value": ".leading.dot@alueducation.com",
       "type": "Invalid String",
       "valid": false
    },
-   "trailing.dot.@alumni.alueducation.com": {
+   {
+      "value": "trailing.dot.@alumni.alueducation.com",
       "type": "Invalid String",
       "valid": false
    },
-   "frank@fake-alueducation.com": {
+   {
+      "value": "f***k@fake-alueducation.com",
       "type": "This is a regular email address",
       "valid": true
    },
-   "admin@alueducation.com.attacker.net": {
+   {
+      "value": "a***n@alueducation.com.attacker.net",
       "type": "This is a regular email address",
       "valid": true
    },
-   "student@alueducation": {
+   {
+      "value": "student@alueducation",
       "type": "Invalid String",
       "valid": false
    },
-   "plainaddress": {
+   {
+      "value": "plainaddress",
       "type": "Invalid String",
       "valid": false
    },
-   "user@@alueducation.com": {
+   {
+      "value": "user@@alueducation.com",
       "type": "Invalid String",
       "valid": false
    },
-   "https://api.partner-sync.io/v2/customers?page=3&limit=100": {
+   {
+      "value": "https://api.partner-sync.io/v2/customers?page=3&limit=100",
       "type": "This is a valid url",
       "valid": true
    },
-   "https://docs.partner-sync.io/runbooks/reconciliation#step-4": {
+   {
+      "value": "https://docs.partner-sync.io/runbooks/reconciliation#step-4",
       "type": "This is a valid url",
       "valid": true
    },
-   "https://hooks.acme-corp.co.ke/inbound/9931": {
+   {
+      "value": "https://hooks.acme-corp.co.ke/inbound/9931",
       "type": "This is a valid url",
       "valid": true
    },
-   "https://partner-sync.io/pricing?utm_source=email&utm_campaign=q3": {
+   {
+      "value": "https://partner-sync.io/pricing?utm_source=email&utm_campaign=q3",
       "type": "This is a valid url",
       "valid": true
    },
-   "https://cdn.partner-sync.io/img/hero.png": {
+   {
+      "value": "https://cdn.partner-sync.io/img/hero.png",
       "type": "This is a valid url",
       "valid": true
    },
-   "https://alumni.alueducation.com/login": {
+   {
+      "value": "https://alumni.alueducation.com/login",
       "type": "This is a valid url",
       "valid": true
    },
-   "https://www.alueducation.com/programmes/bsc-computer-science": {
+   {
+      "value": "https://www.alueducation.com/programmes/bsc-computer-science",
       "type": "This is a valid url",
       "valid": true
    },
-   "https://git.acme-corp.co.ke/payments/releases/v2.4.1": {
+   {
+      "value": "https://git.acme-corp.co.ke/payments/releases/v2.4.1",
       "type": "This is a valid url",
       "valid": true
    },
-   "http://legacy.partner-sync.io:8080/v1/orders": {
+   {
+      "value": "http://legacy.partner-sync.io:8080/v1/orders",
       "type": "This is a valid url",
       "valid": true
    },
-   "http://vendor-legacy.example.org/catalog/item?id=77": {
+   {
+      "value": "http://vendor-legacy.example.org/catalog/item?id=77",
       "type": "This is a valid url",
       "valid": true
    },
-   "https://partner-sync.io/contact": {
+   {
+      "value": "https://partner-sync.io/contact",
       "type": "This is a valid url",
       "valid": true
    },
-   "ftp://files.partner-sync.io/archive.zip": {
+   {
+      "value": "ftp://files.partner-sync.io/archive.zip",
       "type": "Invalid String",
       "valid": false
    },
-   "htp://broken-scheme.example.com": {
+   {
+      "value": "htp://broken-scheme.example.com",
       "type": "Invalid String",
       "valid": false
    },
-   "www.no-scheme-here.com": {
+   {
+      "value": "www.no-scheme-here.com",
       "type": "Invalid String",
       "valid": false
    },
-   "+250 788 123 456": {
+   {
+      "value": "+250 788 *** ***",
       "type": "This is a phone number",
       "valid": true
    },
-   "+250788990112": {
+   {
+      "value": "+250788******",
       "type": "This is a phone number",
       "valid": true
    },
-   "250-788-990-112": {
+   {
+      "value": "250-788-***-***",
       "type": "This is a phone number",
       "valid": true
    },
-   "+1 (202) 555-0147": {
+   {
+      "value": "+1 (202) 55*-****",
       "type": "This is a phone number",
       "valid": true
    },
-   "(415) 555-0132": {
+   {
+      "value": "(415) 555-****",
       "type": "This is a phone number",
       "valid": true
    },
-   "415.555.0199": {
+   {
+      "value": "415.555.****",
       "type": "This is a phone number",
       "valid": true
    },
-   "415-555-0132": {
+   {
+      "value": "415-555-****",
       "type": "This is a phone number",
       "valid": true
    },
-   "212 555 0188": {
+   {
+      "value": "212 555 ****",
       "type": "This is a phone number",
       "valid": true
    },
-   "+44 20 7946 0958": {
+   {
+      "value": "+44 20 79** ****",
       "type": "This is a phone number",
       "valid": true
    },
-   "+254 712 345 678": {
+   {
+      "value": "+254 712 *** ***",
       "type": "This is a phone number",
       "valid": true
    },
-   "555-01": {
+   {
+      "value": "555-01",
       "type": "Invalid String",
       "valid": false
    },
-   "+12345": {
+   {
+      "value": "+12345",
       "type": "Invalid String",
       "valid": false
    },
-   "4111 1111 1111 1111": {
+   {
+      "value": "************1111",
       "type": "This is Visa Credit card",
       "valid": true
    },
-   "4532-0151-1283-0366": {
+   {
+      "value": "************0366",
       "type": "This is Visa Credit card",
       "valid": true
    },
-   "4012888888881881": {
+   {
+      "value": "************1881",
       "type": "This is Visa Credit card",
       "valid": true
    },
-   "4916 3385 0608 0929": {
+   {
+      "value": "************0929",
       "type": "This is Visa Credit card",
       "valid": true
    },
-   "5555 5555 5555 4444": {
+   {
+      "value": "5555 5555 5555 4444",
       "type": "Invalid String",
       "valid": false
    },
-   "6011 0009 9013 9424": {
+   {
+      "value": "6011 0009 9013 9424",
       "type": "Invalid String",
       "valid": false
    },
-   "1234 5678 9012 3456": {
+   {
+      "value": "1234 5678 9012 3456",
       "type": "Invalid String",
       "valid": false
    },
-   "4111 1111 1111 111": {
+   {
+      "value": "4111 1111 1111 111",
       "type": "Invalid String",
       "valid": false
    },
-   "3782 822463 10005": {
+   {
+      "value": "3782 822463 10005",
       "type": "Invalid String",
       "valid": false
    },
-   "4111-1111 1111-1111": {
+   {
+      "value": "4111-1111 1111-1111",
       "type": "Invalid String",
       "valid": false
    },
-   "<div class=\"hero\" data-campaign=\"q3-launch\">": {
+   {
+      "value": "<div class=\"hero\" data-campaign=\"q3-launch\">",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "<h1>": {
+   {
+      "value": "<h1>",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "</h1>": {
+   {
+      "value": "</h1>",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "<p>": {
+   {
+      "value": "<p>",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "</p>": {
+   {
+      "value": "</p>",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "<strong>": {
+   {
+      "value": "<strong>",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "</strong>": {
+   {
+      "value": "</strong>",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "<a href=\"https://partner-sync.io/pricing\">": {
+   {
+      "value": "<a href=\"https://partner-sync.io/pricing\">",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "</a>": {
+   {
+      "value": "</a>",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "<img src=\"https://cdn.partner-sync.io/img/hero.png\" alt=\"dashboard\" />": {
+   {
+      "value": "<img src=\"https://cdn.partner-sync.io/img/hero.png\" alt=\"dashboard\" />",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "<br />": {
+   {
+      "value": "<br />",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "<span class=\"tags\">": {
+   {
+      "value": "<span class=\"tags\">",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "</div>": {
+   {
+      "value": "</div>",
       "type": "This is a valid HTML tag",
       "valid": true
    },
-   "< not a tag >": {
+   {
+      "value": "< not a tag >",
       "type": "Invalid String",
       "valid": false
    },
-   "<123invalid>": {
+   {
+      "value": "<123invalid>",
       "type": "Invalid String",
       "valid": false
    }
-}
+]

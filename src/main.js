@@ -12,48 +12,77 @@ const ALU_ALUMNI_EMAIL_REGEX = /^[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*@alumni\.alue
 const ALU_SI_EMAIL_REGEX = /^[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*@si\.alueducation\.com$/i;
 const COMMENT_REGEX = /^\/\//;
 
-const identify = (value) => {
-	if (ALU_ALUMNI_EMAIL_REGEX.test(value)) return 'This is an ALU alumni email';
-	if (ALU_SI_EMAIL_REGEX.test(value)) return 'This is an ALU SI email';
-	if (ALU_OFFICIAL_EMAIL_REGEX.test(value)) return 'This is an ALU offical email';
-	if (EMAIL_REGEX.test(value)) return 'This is a regular email address';
-	if (VISA_CREDIT_CARD_REGEX.test(value)) return 'This is Visa Credit card';
-	if (URL_REGEX.test(value)) return 'This is a valid url';
-	if (PHONE_REGEX.test(value)) return 'This is a phone number';
-	if (HTML_TAG_REGEX.test(value)) return 'This is a valid HTML tag';
-	return null;
-}
+// Source - https://stackoverflow.com/a/31096949
+const maskCard = (value) => '************' + value.slice(-4);
+
+// Code idea gotten from: https://stackoverflow.com/questions/17651207/mask-us-phone-number-string-with-javascript
+const maskPhone = (value) => {
+	let seen = 0;
+	return value.replace(/\d/g, (digit) => {
+		seen += 1;
+		return seen <= 6 ? digit : '*';
+	});
+};
+
+// Idea Gotten from: https://stackoverflow.com/questions/39247866/mask-email-in-javascript
+const maskEmail = (value) => {
+	return value.replace(/^([^@]+)@/, (_, local) => {
+		if (local.length <= 2) return '**@';
+		return local[0] + '*'.repeat(local.length - 2) + local[local.length - 1] + '@';
+	});
+};
+
+const plainReveal = (value) => value;
+
+const RULES = [
+	{ regex: ALU_ALUMNI_EMAIL_REGEX, label: 'This is an ALU alumni email', mask: maskEmail },
+	{ regex: ALU_SI_EMAIL_REGEX, label: 'This is an ALU SI email', mask: maskEmail },
+	{ regex: ALU_OFFICIAL_EMAIL_REGEX, label: 'This is an ALU official email', mask: maskEmail },
+	{ regex: EMAIL_REGEX, label: 'This is a regular email address', mask: maskEmail },
+	{ regex: VISA_CREDIT_CARD_REGEX, label: 'This is Visa Credit card', mask: maskCard },
+	{ regex: URL_REGEX, label: 'This is a valid url', mask: plainReveal },
+	{ regex: PHONE_REGEX, label: 'This is a phone number', mask: maskPhone },
+	{ regex: HTML_TAG_REGEX, label: 'This is a valid HTML tag', mask: plainReveal },
+];
+
+const INVALID_RULE = { label: 'Invalid String', mask: plainReveal };
+
+const identify = (value) => RULES.find((rule) => rule.regex.test(value)) || null;
 
 const readStrings = (filePath) => {
 	return fs
 		.readFileSync(filePath, 'utf-8')
 		.split(/\r?\n/)
-		.map((line) => line.trim())
-		.filter((line) => line.length > 0 && !COMMENT_REGEX.test(line));
+		.map((text) => ({ value: text.trim() }))
+		.filter(({ value }) => value.length > 0 && !COMMENT_REGEX.test(value));
 }
 
+
+// Main function runner
 const main = () => {
 	const root = path.dirname(__dirname);
 	const outputPath = path.join(root, 'output', 'sample-output.json');
 	const inputPath = path.join(root, 'input', 'raw-text.txt');
 
-	const result = {};
-	for (const value of readStrings(inputPath)) {
-		const type = identify(value);
-		result[value] = { type: type || 'Invalid String', valid: type !== null };
-	}
+	const records = readStrings(inputPath).map(({ value }) => {
+		const rule = identify(value) || INVALID_RULE;
+		return {
+			value: rule.mask(value),
+			type: rule.label,
+			valid: rule !== INVALID_RULE,
+		};
+	});
 
 	fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-	fs.writeFileSync(outputPath, JSON.stringify(result, null, 3) + '\n', 'utf-8');
+	fs.writeFileSync(outputPath, JSON.stringify(records, null, 3) + '\n', 'utf-8');
 
-	const entries = Object.entries(result);
-	for (const [value, verdict] of entries) {
-		console.log(`${verdict.valid ? 'VALID  ' : 'INVALID'}  ${verdict.type.padEnd(18)}  ${value}`);
+	for (const record of records) {
+		console.log(`${record.valid ? 'VALID  ' : 'INVALID'}  ${record.type.padEnd(31)}  ${record.value}`);
 	}
 
- 	const valid = entries.filter(([, verdict]) => verdict.valid).length;
-  console.log(`\n${entries.length} strings checked - ${valid} valid, ${entries.length - valid} invalid`);
-  console.log(`Results written to ${path.relative(root, outputPath)}`);
+	const valid = records.filter((record) => record.valid).length;
+	console.log(`\n${records.length} strings checked - ${valid} valid, ${records.length - valid} invalid`);
+	console.log(`Results written to ${path.relative(root, outputPath)}`);
 }
 
 main();
