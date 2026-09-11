@@ -50,6 +50,10 @@ const main = () => {
 	for (const [value, verdict] of entries) {
 		console.log(`${verdict.valid ? 'VALID  ' : 'INVALID'}  ${verdict.type.padEnd(18)}  ${value}`);
 	}
+
+ 	const valid = entries.filter(([, verdict]) => verdict.valid).length;
+  console.log(`\n${entries.length} strings checked - ${valid} valid, ${entries.length - valid} invalid`);
+  console.log(`Results written to ${path.relative(root, outputPath)}`);
 }
 
 main();
