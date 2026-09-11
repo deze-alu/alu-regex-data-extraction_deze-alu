@@ -2,14 +2,29 @@
 const fs = require("fs")
 const path = require("path")
 
+// A name, then @, then a website name ending in letters.
+// Dots must sit between characters, never at the ends.
 const EMAIL_REGEX = /^[A-Za-z0-9_%+-]+(?:\.[A-Za-z0-9_%+-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z]{2,24}$/;
+// Must start with http:// or https://, then a website name.
+// A port like :8080 and a path after the slash are both optional.
 const URL_REGEX = /^(?:https|http):\/\/[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+(?::\d{2,5})?(?:\/[^\s"'<>]{0,300})?$/
+// An optional +country code, then 3 or 4 groups of 2 to 4 digits.
+// Groups may be split by a space, dot or dash. 13+ digits is refused.
 const PHONE_REGEX = /^(?!(?:\D*\d){13})(?:\+\d{1,3}[\s.-]?)?(?:\(\d{2,4}\)|\d{2,4})(?:[\s.-]?\d{2,4}){2,3}$/;
+// Starts with 4, then 16 digits in four groups of four.
+// The gaps must all match: all spaces, all dashes, or none at all.
 const VISA_CREDIT_CARD_REGEX = /^4\d{3}([ -]?)\d{4}\1\d{4}\1\d{4}$/;
+// A tag like <p>, </p> or <br />. The name must start with a letter.
+// Attributes may follow the name, but can never contain < or >.
 const HTML_TAG_REGEX = /^<\/?[A-Za-z][A-Za-z0-9-]{0,20}(?:\s[^<>]{0,200})?\/?>$/;
+// A name, then exactly @alueducation.com and nothing after it. Also case-insensitve
 const ALU_OFFICIAL_EMAIL_REGEX = /^[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*@alueducation\.com$/i;
+// A name, then exactly @alumni.alueducation.com and nothing after it. Also case-insensitve
 const ALU_ALUMNI_EMAIL_REGEX = /^[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*@alumni\.alueducation\.com$/i;
+// A name, then exactly @si.alueducation.com and nothing after it. Also case-insensitve
 const ALU_SI_EMAIL_REGEX = /^[A-Za-z0-9]+(?:[._-][A-Za-z0-9]+)*@si\.alueducation\.com$/i;
+
+// Targets the comments in the raw_input.txt file
 const COMMENT_REGEX = /^\/\//;
 
 // Source - https://stackoverflow.com/a/31096949
