@@ -1,0 +1,129 @@
+// =========================================================================
+// raw-text.txt  -  RAW INPUT DATA
+// =========================================================================
+//
+// NOTE ON DATA PROVENANCE:
+// AI WAS USED TO GENERATE THE RAW INPUT DATA IN THIS FILE.
+//
+// This file is synthetic sample data. It contains NO real personal data:
+// every email address, phone number, card number and URL below is made up.
+// The card numbers are standard public test numbers used by payment
+// gateways for testing, not real accounts.
+//
+// FORMAT:
+//   - Lines beginning with "//" are comments and are ignored by src/main.js.
+//   - Blank lines are ignored.
+//   - Every other line is one raw string to be checked.
+//   - Each section holds one data type, with a mix of well-formed entries
+//     and deliberately malformed ones so the validation logic in main.js
+//     has something to reject.
+// =========================================================================
+
+
+// -------------------------------------------------------------------------
+// SECTION 1 - EMAIL ADDRESSES
+// Includes the three ALU domains, ordinary external addresses, malformed
+// addresses, and look-alike domains used in phishing.
+// -------------------------------------------------------------------------
+
+n.mugisha@alueducation.com
+aline.uwase@alueducation.com
+j.kamanzi@alueducation.com
+brian.k@alumni.alueducation.com
+alumni.office@alumni.alueducation.com
+chidi.okafor@si.alueducation.com
+si.desk@si.alueducation.com
+dana.w@gmail.com
+ops.team@acme-corp.co.ke
+finance-desk@acme-corp.co.ke
+hello@partner-sync.io
+support+billing@partner-sync.io
+eve..morgan@alueducation.com
+.leading.dot@alueducation.com
+trailing.dot.@alumni.alueducation.com
+frank@fake-alueducation.com
+admin@alueducation.com.attacker.net
+student@alueducation
+plainaddress
+user@@alueducation.com
+
+
+// -------------------------------------------------------------------------
+// SECTION 2 - URLS
+// http and https, with ports, paths, query strings and fragments.
+// -------------------------------------------------------------------------
+
+https://api.partner-sync.io/v2/customers?page=3&limit=100
+https://docs.partner-sync.io/runbooks/reconciliation#step-4
+https://hooks.acme-corp.co.ke/inbound/9931
+https://partner-sync.io/pricing?utm_source=email&utm_campaign=q3
+https://cdn.partner-sync.io/img/hero.png
+https://alumni.alueducation.com/login
+https://www.alueducation.com/programmes/bsc-computer-science
+https://git.acme-corp.co.ke/payments/releases/v2.4.1
+http://legacy.partner-sync.io:8080/v1/orders
+http://vendor-legacy.example.org/catalog/item?id=77
+https://partner-sync.io/contact
+ftp://files.partner-sync.io/archive.zip
+htp://broken-scheme.example.com
+www.no-scheme-here.com
+
+
+// -------------------------------------------------------------------------
+// SECTION 3 - PHONE NUMBERS
+// International and North American formats, spaced, dotted and hyphenated.
+// -------------------------------------------------------------------------
+
++250 788 123 456
++250788990112
+250-788-990-112
++1 (202) 555-0147
+(415) 555-0132
+415.555.0199
+415-555-0132
+212 555 0188
++44 20 7946 0958
++254 712 345 678
+555-01
++12345
+
+
+// -------------------------------------------------------------------------
+// SECTION 4 - CREDIT CARD NUMBERS
+// 16 digits in four groups of four, starting with 4 (Visa). Separators must
+// be consistent. Public test numbers, plus cards from other issuers and
+// numbers with the wrong length, grouping or separators, to be rejected.
+// -------------------------------------------------------------------------
+
+4111 1111 1111 1111
+4532-0151-1283-0366
+4012888888881881
+4916 3385 0608 0929
+5555 5555 5555 4444
+6011 0009 9013 9424
+1234 5678 9012 3456
+4111 1111 1111 111
+3782 822463 10005
+4111-1111 1111-1111
+
+
+// -------------------------------------------------------------------------
+// SECTION 5 - HTML TAGS
+// Opening, closing, self-closing and attribute-carrying tags.
+// -------------------------------------------------------------------------
+
+<div class="hero" data-campaign="q3-launch">
+<h1>
+</h1>
+<p>
+</p>
+<strong>
+</strong>
+<a href="https://partner-sync.io/pricing">
+</a>
+<img src="https://cdn.partner-sync.io/img/hero.png" alt="dashboard" />
+<br />
+<span class="tags">
+</div>
+< not a tag >
+<123invalid>
