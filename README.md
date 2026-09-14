@@ -278,37 +278,6 @@ INVALID  invalid             student@alueducation
 
 ---
 
-## Security considerations
-
-The brief asks the program to show that input is not automatically trusted.
-Two properties of the patterns themselves do that, and neither weakens if the
-input file changes.
-
-**1. The patterns are bounded, which prevents ReDoS.**
-Every repetition has an upper limit — `{0,300}`, `{2,24}`, `{0,200}` — instead of
-an open-ended `.*`. Catastrophic backtracking, where a crafted string makes a
-regex engine run for an extremely long time, needs unbounded nested quantifiers.
-Bounded ones cannot blow up, so a hostile input file cannot stall the program
-through the pattern matching itself.
-
-**2. Validation is allow-list shaped, not deny-list shaped.**
-Every pattern describes what is *acceptable* and rejects everything else, rather
-than listing bad things to block. Nothing is passed through because it "looks
-fine" — a string is only ever accepted because it matched a pattern in full,
-anchored end to end. Anything unexpected fails by default and is recorded as
-`invalid`.
-
-This is also what makes the ALU checks trustworthy: `admin@alueducation.com.attacker.net`
-is a perfectly well-formed email address, and it is still rejected, because it
-does not match any ALU pattern, so it can never be labelled as an ALU address.
-
-Values are written to the report as they appear in the input. The sample data is
-synthetic — no real addresses, phone numbers or card accounts — so there is
-nothing to redact. A system processing live data should mask card numbers and
-contact details before writing them to any report or log.
-
----
-
 ## Sample data
 
 `input/raw-text.txt` states its own provenance at the top: **the raw input data
